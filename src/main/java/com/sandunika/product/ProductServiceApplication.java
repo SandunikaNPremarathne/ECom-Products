@@ -1,13 +1,13 @@
-package com.sandunika.ecompet;
+package com.sandunika.product;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EcomPetApplication {
+public class ProductServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EcomPetApplication.class, args);
+		SpringApplication.run(ProductServiceApplication.class, args);
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.sandunika.ecompet;
+package com.sandunika.product;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.sandunika.ecompet;
+package com.sandunika.product;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
