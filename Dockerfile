@@ -1,20 +1,14 @@
-# Use a base image containing Java 21 runtime
-FROM openjdk:21-jre-slim
+# Use a base image with Java 21 (e.g., JDK 17)
+FROM openjdk:21-slim
 
-# Add Maintainer Info
-LABEL maintainer="your-email@example.com"
+# Set the working directory inside the container
+WORKDIR /app
 
-# Add a volume pointing to /tmp
-VOLUME /tmp
+# Copy the packaged WAR file into the container
+COPY target/product-service-0.0.1-SNAPSHOT.war /app/app.war
 
-# Make port 8081 available to the world outside this container
+# Expose the port that your Spring Boot application listens on
 EXPOSE 8081
 
-# The application's jar file
-ARG JAR_FILE=target/*.jar
-
-# Add the application's jar to the container
-ADD ${JAR_FILE} app.jar
-
-# Run the jar file
-ENTRYPOINT ["java","-jar","/app.jar"]
+# Define the command to run your application
+CMD ["java", "-jar", "app.war"]
